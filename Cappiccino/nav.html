@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+         #big{
+      display: grid;
+      grid-template-columns: repeat(4, fr);
+      grid-template-rows: 80px 300px;
+      gap: 20px;
+      grid-template-areas:
+          "nav nav nav nav "
+          "b1 b2 b3 b4";
+         }
+
+          #nav {
+              margin: 50px;
+              padding: 50px;
+              border: 2px solid red;
+          }
+    </style>
+  </head>
+
+  <body>
+    <id class="big">
+      <id class="nav">Navigation</id>
+      <div>Box1</div>
+      <div>Box2</div>
+      <div>Box3</div>
+      <div>Box4</div>
+    </id>
+  </body>
+</html>

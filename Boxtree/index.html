@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        padding: 5px;
+        /* border: 2px solid; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 80px 300px;
+        grid-template-areas:
+          "a a a a"
+          "b c d e";
+        gap: 20px;
+      }
+      .container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid; */
+      }
+
+      .container > div:nth-child(1) {
+        background: yellow;
+        grid-area: a;
+      }
+      .container > div:nth-child(2) {
+        background: red;
+        grid-area: b;
+      }
+      .container > div:nth-child(3) {
+        background: green;
+        grid-area: c;
+      }
+      .container > div:nth-child(4) {
+        background: blue;
+        grid-area: d;
+      }
+      .container > div:nth-child(5) {
+        background: rgb(103, 103, 6);
+        grid-area: e;
+      }
+
+
+
+/* tablet */
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .container{
+        /* background: #000; */
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 80px 200px 200px;
+        grid-template-areas:
+          "a a"
+          "b c"
+          "d e";
+    }
+
+}
+/* mob */
+@media only screen and (min-width:320px) and (max-width:767px){
+    .container{
+        /* background: #000; */
+        grid-template-columns: auto;
+        grid-template-rows: 80px 200px 200px 200px 200px;
+        grid-template-areas:
+          "a"
+          "b"
+          "c"
+          "e"
+          "d";
+    }
+
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>NAVIGATION</div>
+      <div>BOX1</div>
+      <div>BOX2</div>
+      <div>BOX3</div>
+      <div>BOX4</div>
+    </div>
+  </body>
+</html>
